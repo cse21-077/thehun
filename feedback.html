@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback Form</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body class="container">
+    <div class="navbar">
+        <div class="navbarContainer">
+            <div class="logoContainer">
+                <a href="index.html"><img src="logo.png" alt="Warner Bros Logo" height="50" width="50"></a>
+            </div>
+            <div class="menuContainer">
+                <ul class="menuList">
+                    <li class="menuListItem"><a href="index.html" class="menuListItem">Home</a></li>
+                    <li class="menuListItem"><a href="movies.html" class="menuListItem">Movies</a></li>
+                    <li class="menuListItem"><a href="tvshows.html" class="menuListItem">TvShows</a></li>
+                    <li class="menuListItem"><a href="collections.html" class="menuListItem">Collections</a></li>
+                    <li class="menuListItem"><a href="feedback.html" class="menuListItem">Feedback</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <form id="feedbackForm" style="max-width: 500px; margin: auto; padding: 20px; border: 1px solid #000000; border-radius: 5px; background-color: #1a6579a1;">
+        <h2 style="text-align: center;">Feedback Form</h2>
+        <label for="email" style="display: block; margin-bottom: 10px; font-weight: bold;">Email:</label>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #000000; border-radius: 5px;">
+
+        <label for="message" style="display: block; margin-bottom: 10px; font-weight: bold;">Message:</label>
+        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #000000; border-radius: 5px;"></textarea>
+
+        <button type="submit" style="width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #4c99af; color: rgb(0, 0, 0); font-size: 16px; cursor: pointer;">Send</button>
+    </form>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Feedback sent successfully!');
+            document.getElementById('feedbackForm').reset();
+        });
+    </script>
+</body>
+</html>
