@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+.navbarContainer {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: 'Sen', sans-serif;
+}
+
+.logoContainer {
+    flex: 1;
+}
+
+
+.menuContainer {
+    flex: 6;
+    color: white;
+}
+
+
+
+
+/* Ensure the style is applied to the a elements within menuListItem class */
+.menuListItem a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #ffffff; /* Set the text color */
+    font-family: Arial, sans-serif; /* Set the font */
+    font-size: 16px; /* Set the font size */
+    padding: 10px 15px; /* Add some padding around the text */
+    display: block; /* Make the links block-level elements */
+}
+
+/* Add hover effect */
+.menuListItem a:hover {
+    background-color: #0d91a2; /* Light grey background on hover */
+    color: #000; /* Darker text color on hover */
+}
+
+/* Active link styling */
+.menuListItem a:active {
+    background-color: #ddd; /* Slightly darker background when active */
+}
+
+/* Style for the current page link (you can add an 'active' class to the current page link in your HTML) */
+.menuListItem a.active {
+    background-color: #ccc; /* Different background color for the active page */
+    color: #000; /* Darker text color for the active page */
+    font-weight: bold; /* Bold text for the active page */
+}
+
+
+
+.menuList {
+    display: flex;
+    list-style: none;
+}
+
+.menuListItem {
+    margin: 30px;
+    cursor: pointer;
+}
+
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toggleIcon {
+    color: goldenrod;
+}
+
+.toggleBall {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.container {
+    min-height: calc(100vh - 50px);
+    background-color: #151515;
+    color: white;
+}
+
+.contentContainer {
+    margin-left: 50px;
+}
+
+.featuredContent {
+    height: 50vh;
+    padding: 50px;
+}
+
+.featuredTitle {
+    width: 200px;
+}
+
+.featuredDesc {
+    width: 500px;
+    color: lightgray;
+    margin: 30px 0;
+}
+
+.featuredButton {
+    background-color: rgb(0, 174, 255);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.movieListContainer {
+    padding: 0 20px;
+}
+
+.movieListWrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movieList {
+    display: flex;
+    height: 300px;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movieListItem {
+    margin-right: 30px;
+    position: relative;
+}
+
+.movieListItem:hover .movieListItemImg {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movieListItem:hover .movieListItemTitle,
+.movieListItem:hover .movieListItemDesc,
+.movieListItem:hover .movieListItemButton {
+    opacity: 1;
+}
+
+.movieListItemImg {
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    border-radius: 20px;
+}
+
+.movieListItemTitle {
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movieListItemDesc {
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+}
+
+.movieListItemButton {
+    padding: 10px;
+    background-color: rgb(0, 187, 255);
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+}
+
+.arrow {
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.container.active {
+    background-color: white;
+}
+
+.movieListTitle.active {
+    color: black;
+}
+
+.navbarContainer.active {
+    background-color: white;
+    color: black;
+}
+
+.sidebar.active {
+    background-color: white;
+}
+
+.leftMenuIcon.active{
+    color: black;
+}
+
+.toggle.active {
+    background-color: black;
+}
+
+.toggleBall.active {
+    background-color: white;
+    transform: translateX(-20px);
+}
+
+.menuListItem.active {
+    color: black;
+}
+
+
+
+@media only screen and (max-width: 940px) {
+    .menuContainer {
+        display: none;
+    }
+}
